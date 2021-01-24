@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script>
+        var AirpodAudio;
+        
+        window.addEventListener('message', function(event) {
+            var item = event.data;
+            
+            if (item.playradio) {
+                if (AirpodAudio != null) {
+                    AirpodAudio.pause();
+                }
+                
+                AirpodAudio = new Audio(item.sound);
+                AirpodAudio.volume = 0.5;
+                AirpodAudio.play();
+            } else if (item.changevolume) {
+                if (AirpodAudio != null) {
+                    AirpodAudio.volume = item.volume;
+                }
+            } else if (item.stopradio) {
+                if (AirpodAudio != null) {
+                    AirpodAudio.pause();
+                }
+            }
+        });
+        </script>
+    </head>
+</html>
