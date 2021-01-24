@@ -39,4 +39,4 @@ Then it won't stream the url when you press it ingame, instead it will stop the 
 
 
 ### FOR THE DUTCH PEOPLE
-Als je op zoekt bent naar een Roleplay server dat niet zo standaard ESX is maar streeft naar het neerzetten van een unieke ervaring op basis van het QBUS framework. Dan ben je van harte welkom bij ons op: discord.gg/yN3hXYesQd
+Als je op zoekt bent naar een Roleplay server dat niet zo standaard ESX is maar streeft naar het neerzetten van een unieke ervaring op basis van het QBUS framework. Dan ben je van harte welkom bij ons op [Discord](discord.gg/yN3hXYesQd)
