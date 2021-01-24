@@ -1,8 +1,8 @@
-ASCore = nil
+QBCore = nil
 
 Citizen.CreateThread(function()
-	while ASCore == nil do
-		TriggerEvent('ASCore:GetObject', function(obj) ASCore = obj end)
+	while QBCore == nil do
+		TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
 		Citizen.Wait(0)
 	end
 end)
@@ -19,7 +19,7 @@ AddEventHandler("AS-SRadio:Client:TriggerMenu", function()
 	volumee:On('change', function(item, newValue, oldValue)
 		TriggerEvent("AS-SRadio:Client:ChangeAirpodsVolume", newValue)
 	end)
-	ASCore.Functions.TriggerCallback('AS-SRadio:Server:SyncRadios', function(radios)
+	QBCore.Functions.TriggerCallback('AS-SRadio:Server:SyncRadios', function(radios)
 		if radios ~= nil then
 			for k, v in pairs(radios) do
 				local station = k
@@ -28,12 +28,12 @@ AddEventHandler("AS-SRadio:Client:TriggerMenu", function()
 					if v.url == nil then
 						TriggerEvent("AS-SRadio:Client:StopAirpods")
 						TriggerEvent("AS-SRadio:Client:ToggleAirpods", false)
-						ASCore.Functions.Notify(Config.RadioOffMSG)
+						QBCore.Functions.Notify(Config.RadioOffMSG)
 						NowPlaying = "Made by ASKP#3522"
 					else
 						TriggerEvent("AS-SRadio:Client:PlayAirpods", v.url)
 						TriggerEvent("AS-SRadio:Client:ToggleAirpods", true)
-						ASCore.Functions.Notify(Config.RadioOnMSG ..v.name)						
+						QBCore.Functions.Notify(Config.RadioOnMSG ..v.name)						
 						NowPlaying = "Nu aan het afspelen: "..v.name
 					end
 					SRadio:Close()

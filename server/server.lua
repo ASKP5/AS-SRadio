@@ -1,8 +1,8 @@
-ASCore = nil
+QBCore = nil
 
-TriggerEvent("ASCore:GetObject", function(obj) ASCore = obj end)
+TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)
 
-ASCore.Functions.CreateCallback('AS-SRadio:Server:SyncRadios', function(source, cb)
+QBCore.Functions.CreateCallback('AS-SRadio:Server:SyncRadios', function(source, cb)
 	local src = source
   exports['ghmattimysql']:execute('SELECT * FROM radios', function(radiolist)
     local Radios = {}
@@ -19,8 +19,8 @@ ASCore.Functions.CreateCallback('AS-SRadio:Server:SyncRadios', function(source, 
   end)
 end)
 
-ASCore.Functions.CreateUseableItem("airpods", function(source)
-  local Player = ASCore.Functions.GetPlayer(source)
+QBCore.Functions.CreateUseableItem("airpods", function(source)
+  local Player = QBCore.Functions.GetPlayer(source)
   local src = source
   TriggerClientEvent("AS-SRadio:Client:OpenMenu", src)
 end)
