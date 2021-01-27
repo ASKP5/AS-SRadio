@@ -35,6 +35,7 @@ Then it won't stream the url when you press it ingame, instead it will stop the 
 - Rename the resource to `as-sradio` or something to your likings
 - Install this dependency: [MenuV](https://forum.cfx.re/t/release-menuv-standalone-nui-menu-for-fivem-v1-4-docs-added/1824558)
 - Make sure the MenuV resource is called `menuv`
+- If you want to use the item add 'airpods' to the shared.lua in your core
 
 
 
